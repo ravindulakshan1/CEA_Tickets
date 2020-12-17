@@ -587,13 +587,13 @@ public class NewAdminPnl extends javax.swing.JFrame {
         Done_By_Ad_In.setText(model.getValueAt(i, 15).toString());
         Rec_Date_Ad_In.setText(model.getValueAt(i, 16).toString());
         Hand_Date_Ad_In.setText(model.getValueAt(i, 17).toString());
-       /* String Warr_Peri_Ad_In= model.getValueAt(i, 18).toString();
-            switch(Warr_Peri_Ad_In){
-                case"3"{
-                    3.setSelected(true);
+        /*String Warr_Peri_Ad_In= model.getValueAt(i, 18).toString();
+            switch(Warr_Peri_Ad_In1){
+                case"3 "{
+                   Warr_Peri_Ad_In.setSelected(true);
                 }
             }
-            } */
+            }*/ 
         Serial_No_Ad_In.setText(model.getValueAt(i, 19).toString());
         Rep_Item_Ad_In.setText(model.getValueAt(i, 20).toString());
         Rep_Yr_Ad_In.setText(model.getValueAt(i, 21).toString());
