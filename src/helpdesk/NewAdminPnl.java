@@ -7,6 +7,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
+import javax.swing.table.TableModel;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -166,6 +167,11 @@ public class NewAdminPnl extends javax.swing.JFrame {
                 "EPF_No", "Name", "Designation", "Division", "Fault", "CEA_No", "Item_Type", "Brand", "Device_Type", "Year", "Division", "Num", "Job_ID", "Repair_Details", "Done_By", "Rec_Date", "Hand_Date", "War_Period", "Serial_No", "Rep_Item", "Rep_Year", "Rep_Month", "Rep_Date", "Sup_Name", "Sup_ConNo"
             }
         ));
+        jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jTable1MouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(jTable1);
 
         jLabel1.setText("EPF_No");
@@ -560,6 +566,46 @@ public class NewAdminPnl extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnSubmit_AdActionPerformed
 
+    private void jTable1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTable1MouseClicked
+        
+        int i= jTable1.getSelectedRow();
+        TableModel model = jTable1.getModel();
+        EPF_Ad_In.setText(model.getValueAt(i, 1).toString());
+        Name_Ad_In.setText(model.getValueAt(i, 2).toString());
+        Desig_Ad_In.setText(model.getValueAt(i, 3).toString());
+        Divi_Ad_In.setText(model.getValueAt(i, 4).toString());
+        Fault_Ad_In.setText(model.getValueAt(i, 5).toString());
+        CEA_Ad_In.setText(model.getValueAt(i, 6).toString());
+        ItemTyp_Ad_In.setText(model.getValueAt(i, 7).toString());
+        Brand_Ad_In.setText(model.getValueAt(i, 8).toString());
+        DeviceTyp_Ad_In.setText(model.getValueAt(i, 9).toString());
+        Year_Ad_In.setText(model.getValueAt(i, 10).toString());
+        Division_Ad_In.setText(model.getValueAt(i, 11).toString());
+        Num_Ad_In.setText(model.getValueAt(i, 12).toString());
+        JobID_Ad_In.setText(model.getValueAt(i, 13).toString());
+        Rep_Details_Ad_In.setText(model.getValueAt(i, 14).toString());
+        Done_By_Ad_In.setText(model.getValueAt(i, 15).toString());
+        Rec_Date_Ad_In.setText(model.getValueAt(i, 16).toString());
+        Hand_Date_Ad_In.setText(model.getValueAt(i, 17).toString());
+       /* String Warr_Peri_Ad_In= model.getValueAt(i, 18).toString();
+            switch(Warr_Peri_Ad_In){
+                case"3"{
+                    3.setSelected(true);
+                }
+            }
+            } */
+        Serial_No_Ad_In.setText(model.getValueAt(i, 19).toString());
+        Rep_Item_Ad_In.setText(model.getValueAt(i, 20).toString());
+        Rep_Yr_Ad_In.setText(model.getValueAt(i, 21).toString());
+        Rep_Mon_Ad_In.setText(model.getValueAt(i, 22).toString());
+        Rep_Date_Ad_In.setText(model.getValueAt(i, 23).toString());
+        Sup_No_Ad_In.setText(model.getValueAt(i, 24).toString());
+        Sup_Name_Ad_In.setText(model.getValueAt(i, 25).toString());
+        Sup_Con_Num_Ad_In.setText(model.getValueAt(i, 26).toString());
+   
+        
+    }//GEN-LAST:event_jTable1MouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -650,6 +696,10 @@ public class NewAdminPnl extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
+    private void setSelected(boolean b) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 
 }
