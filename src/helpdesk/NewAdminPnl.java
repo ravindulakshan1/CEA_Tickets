@@ -42,7 +42,7 @@ public class NewAdminPnl extends javax.swing.JFrame {
             
             while(rs.next()){
             
-                admin=new Admin(rs.getInt("EPF_No"),rs.getInt("Year"),rs.getInt("Num"),rs.getInt("Job_ID"),rs.getInt("Warr_Period"),rs.getInt("Rep_Year"),rs.getInt("Rep_Month"),rs.getInt("Sup_No"),rs.getInt("Sup_ConNo"),rs.getString("Name"),rs.getString("Designation"),rs.getString("Division"),rs.getString("Fault"),rs.getString("CEA_No"),rs.getString("Item_Type"),rs.getString("Brand"),rs.getString("Device_Type"),rs.getString("CEA_division"),rs.getString("Repair_Details"),rs.getString("Done_By"),rs.getString("Rec_Date"),rs.getString("Hand_Date"),rs.getString("Serial_No"),rs.getString("Rep_Item"),rs.getString("Rep_Date"),rs.getString("Sup_Name"));
+                admin=new Admin(rs.getInt("EPF_No"),rs.getInt("Year"),rs.getInt("Num"),rs.getInt("Job_ID"),rs.getInt("Warr_Period"),rs.getInt("Rep_Year"),rs.getInt("Rep_Month"),rs.getInt("Sup_No"),rs.getInt("Sup_ConNo"),rs.getInt("Rep_Date"),rs.getString("Name"),rs.getString("Designation"),rs.getString("Division"),rs.getString("Fault"),rs.getString("CEA_No"),rs.getString("Item_Type"),rs.getString("Brand"),rs.getString("Device_Type"),rs.getString("CEA_division"),rs.getString("Repair_Details"),rs.getString("Done_By"),rs.getString("Rec_Date"),rs.getString("Hand_Date"),rs.getString("Serial_No"),rs.getString("Rep_Item"),rs.getString("Sup_Name"));
                 adminList.add(admin);
             }
             
@@ -83,7 +83,7 @@ public class NewAdminPnl extends javax.swing.JFrame {
             row[19]=list.get(i).getRep_Item();
             row[20]=list.get(i).getRep_Year();
             row[21]=list.get(i).getRep_Month();
-            row[22]=list.get(i).getRec_Date();
+            row[22]=list.get(i).getRep_Date();
             row[23]=list.get(i).getSup_No();
             row[24]=list.get(i).getSup_Name();
             row[25]=list.get(i).getSup_ConNo();
