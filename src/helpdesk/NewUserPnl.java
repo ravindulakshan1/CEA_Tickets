@@ -226,6 +226,8 @@ public class NewUserPnl extends javax.swing.JFrame {
             Connection cn=MySQLConnect.ConnectDB();
             String sql="insert into all_table(EPF_No,Name,Designation,Division,Fault,CEA_No,Item_Type,Brand,Device_Type,Year,CEA_division,Num) values(?,?,?,?,?,?,?,?,?,?,?,?)";
            // ps=cn.prepareStatement(sql);
+           //String sql="UPDATE all_table SET EPF_No=?,Name=?,Designation=?,Division=?,Fault=?,CEA_No=?,Item_Type=?,Brand=?,Device_Type=?,Year=?,CEA_division=?,Num=?"+value;
+           
            final PreparedStatement ps= cn.prepareStatement(sql);
             ps.setString(1,Usr_EPF_Input.getText());
             ps.setString(2,Usr_Name_Input.getText());
