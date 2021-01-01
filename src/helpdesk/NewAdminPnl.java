@@ -161,10 +161,10 @@ public class NewAdminPnl extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null}
+                {null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "EPF_No", "Name", "Designation", "Division", "Fault", "CEA_No", "Item_Type", "Brand", "Device_Type", "Year", "Division", "Num", "Job_ID", "Repair_Details", "Done_By", "Rec_Date", "Hand_Date", "War_Period", "Serial_No", "Rep_Item", "Rep_Year", "Rep_Month", "Rep_Date", "Sup_Name", "Sup_ConNo"
+                "EPF_No", "Name", "Designation", "Division", "Fault", "CEA_No", "Item_Type", "Brand", "Device_Type", "Year", "Division", "Num", "Job_ID", "Repair_Details", "Done_By", "Rec_Date", "Hand_Date", "War_Period", "Serial_No", "Rep_Item", "Rep_Year", "Rep_Month", "Rep_Date", "Sup_No", "Sup_Name", "Sup_ConNo"
             }
         ));
         jTable1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -475,7 +475,7 @@ public class NewAdminPnl extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 631, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 627, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -525,7 +525,7 @@ public class NewAdminPnl extends javax.swing.JFrame {
             
             int row=jTable1.getSelectedRow();
             String value = (jTable1.getModel().getValueAt(row, 0).toString());
-            String query = "UPDATE all_table SET EPF_No=?,Name=?,Designation=?,Division=?,Fault=?,CEA_No=?,Item_Type=?,Brand=?,Device_Type=?,Year=?,CEA_division=?,Num=?,Job_ID=?,Repair_Details=?,Done_By=?,Rec_Date=?,Hand_Date=?,Warr_Period=?,Serial_No=?,Rep_Item=?,Rep_Year=?,Rep_Month=?,Rep_Date=?,Sup_No=?,Sup_Name=?,Sup_ConNo=?"+value;
+            String query = "UPDATE all_table SET EPF_No=?,Name=?,Designation=?,Division=?,Fault=?,CEA_No=?,Item_Type=?,Brand=?,Device_Type=?,Year=?,CEA_division=?,Num=?,Job_ID=?,Repair_Details=?,Done_By=?,Rec_Date=?,Hand_Date=?,Warr_Period=?,Serial_No=?,Rep_Item=?,Rep_Year=?,Rep_Month=?,Rep_Date=?,Sup_No=?,Sup_Name=?,Sup_ConNo=?" +value;
             
             final PreparedStatement ps= conn.prepareStatement(query);
             ps.setString(1,EPF_Ad_In.getText());
@@ -585,23 +585,45 @@ public class NewAdminPnl extends javax.swing.JFrame {
         Done_By_Ad_In.setText(model.getValueAt(i, 14).toString());
         Rec_Date_Ad_In.setText(model.getValueAt(i, 15).toString());
         Hand_Date_Ad_In.setText(model.getValueAt(i, 16).toString());
-        /*String Warr_Peri_Ad_In= model.getValueAt(i, 17).toString();
-            switch(Warr_Peri_Ad_In1){
-                case"3 "{
-                   Warr_Peri_Ad_In.setSelected(true);
-                }
-            }
-            }*/ 
+        String value= model.getValueAt(i, 17).toString();
+        Warr_Peri_Ad_In.setSelectedItem(value);
         Serial_No_Ad_In.setText(model.getValueAt(i, 18).toString());
         Rep_Item_Ad_In.setText(model.getValueAt(i, 19).toString());
         Rep_Yr_Ad_In.setText(model.getValueAt(i, 20).toString());
         Rep_Mon_Ad_In.setText(model.getValueAt(i, 21).toString());
-        Rep_Date_Ad_In.setText(model.getValueAt(i, 22).toString());
+        Rep_Date_Ad_In.setText(model.getValueAt(i, 22).toString()); 
         Sup_No_Ad_In.setText(model.getValueAt(i, 23).toString());
         Sup_Name_Ad_In.setText(model.getValueAt(i, 24).toString());
         Sup_Con_Num_Ad_In.setText(model.getValueAt(i, 25).toString());
    
-        
+        /*
+        EPF_Ad_In.setText(" ");
+        Name_Ad_In.setText(" ");
+        Desig_Ad_In.setText(" ");
+        Divi_Ad_In.setText(" ");
+        Fault_Ad_In.setText(" ");
+        CEA_Ad_In.setText(" ");
+        ItemTyp_Ad_In.setText(" ");
+        Brand_Ad_In.setText(" ");
+        DeviceTyp_Ad_In.setText(" ");
+        Year_Ad_In.setText(" ");
+        Division_Ad_In.setText(" ");
+        Num_Ad_In.setText(" ");
+        JobID_Ad_In.setText(" ");
+        Rep_Details_Ad_In.setText(" ");
+        Done_By_Ad_In.setText(" ");
+        Rec_Date_Ad_In.setText(" ");
+        Hand_Date_Ad_In.setText(" ");
+        Warr_Peri_Ad_In.setSelectedItem(" ");
+        Serial_No_Ad_In.setText(" ");
+        Rep_Item_Ad_In.setText(" ");
+        Rep_Yr_Ad_In.setText(" ");
+        Rep_Mon_Ad_In.setText(" ");
+        Rep_Date_Ad_In.setText(" ");
+        Sup_No_Ad_In.setText(" ");
+        Sup_Name_Ad_In.setText(" ");
+        Sup_Con_Num_Ad_In.setText(" ");
+        */
     }//GEN-LAST:event_jTable1MouseClicked
 
     /**

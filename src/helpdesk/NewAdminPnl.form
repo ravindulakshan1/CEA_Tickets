@@ -31,7 +31,7 @@
     </DimensionLayout>
     <DimensionLayout dim="1">
       <Group type="103" groupAlignment="0" attributes="0">
-          <Component id="jScrollPane1" min="-2" pref="631" max="-2" attributes="0"/>
+          <Component id="jScrollPane1" min="-2" pref="627" max="-2" attributes="0"/>
       </Group>
     </DimensionLayout>
   </Layout>
@@ -274,7 +274,7 @@
                 <Component class="javax.swing.JTable" name="jTable1">
                   <Properties>
                     <Property name="model" type="javax.swing.table.TableModel" editor="org.netbeans.modules.form.editors2.TableModelEditor">
-                      <Table columnCount="25" rowCount="1">
+                      <Table columnCount="26" rowCount="1">
                         <Column editable="true" title="EPF_No" type="java.lang.Object"/>
                         <Column editable="true" title="Name" type="java.lang.Object"/>
                         <Column editable="true" title="Designation" type="java.lang.Object"/>
@@ -298,12 +298,18 @@
                         <Column editable="true" title="Rep_Year" type="java.lang.Object"/>
                         <Column editable="true" title="Rep_Month" type="java.lang.Object"/>
                         <Column editable="true" title="Rep_Date" type="java.lang.Object"/>
+                        <Column editable="true" title="Sup_No" type="java.lang.Object"/>
                         <Column editable="true" title="Sup_Name" type="java.lang.Object"/>
                         <Column editable="true" title="Sup_ConNo" type="java.lang.Object"/>
                       </Table>
                     </Property>
                     <Property name="columnModel" type="javax.swing.table.TableColumnModel" editor="org.netbeans.modules.form.editors2.TableColumnModelEditor">
                       <TableColumnModel selectionModel="0">
+                        <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
+                          <Title/>
+                          <Editor/>
+                          <Renderer/>
+                        </Column>
                         <Column maxWidth="-1" minWidth="-1" prefWidth="-1" resizable="true">
                           <Title/>
                           <Editor/>
